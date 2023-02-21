@@ -1,0 +1,169 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.animate1 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #F92580;
+    border-radius: 50%;
+    animation-name: animate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+@keyframes animate {
+    50% {
+        transform: translate(1250px);
+    }
+    100% {
+        transform: translateY(400px);
+    }
+}
+.animate2 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    right: 0;
+    border: 2px solid #F92580;
+    border-radius: 50%;
+    animation-name: animate2;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+@keyframes animate2 {
+    50% {
+        transform: translate(-1150px);
+    }
+    100% {
+        transform: translateY(400px);
+    }
+}
+body {
+    background-image: url(./Background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.contain{
+    width: 60%;
+    height: 80vh;
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    background: rgba(213, 213, 213, 0.15);
+    box-shadow: -10px 10px 7px -6px rgba(227,41,119,0.75) inset;
+    -webkit-box-shadow: -10px 10px 7px -6px rgba(227,41,119,0.75) inset;
+    -moz-box-shadow: -10px 10px 7px -6px rgba(227,41,119,0.75) inset;
+    backdrop-filter: blur(5px);
+}
+marquee h1 {
+    font-size: 30px;
+    margin-bottom: 50px;
+    color: #F92580;
+}
+input {
+    width: 50%;
+    height: 50px;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    background: none;
+    outline: none;
+    color: #F92580;
+    border-bottom: 4px solid #F92580;
+}
+button {
+    display: block;
+    margin: auto;
+    width: 50%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background: #F92580;
+    color: #002866;
+    font-size: 30px;
+    transition: all 0.3s ease;
+}
+button:hover {
+    background: #002866;
+    width: 40%;
+    color: #F92580;
+    border: 2px solid #F92580;
+    background: none;
+}
+@media (max-width: 768px) {
+    body {
+        background-image: url(./Background.jpg);
+        background-size: cover;
+        background-repeat: repeat;
+    }
+    .contain {
+        width: 90%;
+        padding-top: 80px;
+        margin-top: 70px;
+    }
+    marquee h1 {
+        font-size: 25px;
+    }
+    input {
+        width: 90%;
+    }
+    button {
+        width: 90%;
+    }
+    button:hover {
+        background: #002866;
+        color: #F92580;
+        width: 90%;
+    }
+    .animate1 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border: 2px solid #F92580;
+        border-radius: 50%;
+        animation-name: animate;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+    }
+    @keyframes animate {
+        50% {
+            transform: translate(250px);
+        }
+        100% {
+            transform: translateY(400px);
+        }
+    }
+    .animate2 {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        right: 0;
+        border: 2px solid #F92580;
+        border-radius: 50%;
+        animation-name: animate2;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+    }
+    @keyframes animate2 {
+        50% {
+            transform: translate(-200px);
+        }
+        100% {
+            transform: translateY(400px);
+        }
+    }
+}

@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./tictac.css">
+        <title>Tic-Tac-Toe</title>
+    </head>
+    <body>
+        <div class="animate1"></div>
+        <div class="animate2"></div>
+        <div class="container">
+            <h1>TIC-TAC-TOE Game</h1>
+            <div class="row">
+                <div class="col-6">
+                    <table class="game" id="gameTable">
+                        <tr>
+                            <td onclick="test(event)" id="one"></td>
+                            <td onclick="test(event)" id="two"></td>
+                            <td onclick="test(event)" id="three"></td>
+                        </tr>
+                        <tr>
+                            <td onclick="test(event)" id="four"></td>
+                            <td onclick="test(event)" id="five"></td>
+                            <td onclick="test(event)" id="six"></td>
+                        </tr>
+                        <tr>
+                            <td onclick="test(event)" id="seven"></td>
+                            <td onclick="test(event)" id="eight"></td>
+                            <td onclick="test(event)" id="nine"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-6 score">
+                    <h2>Game Result</h2>
+                    <table class="result">
+                        <tr>
+                            <th id="firstPlayerName">First Player</th>
+                            <th id="secondPlayerName">Second Player</th>
+                        </tr>
+                        <tr>
+                            <td id="firstPlayer"></td>
+                            <td id="secondPlayer"></td>
+                        </tr>
+                    </table>
+                    <div id="result"></div>
+                    <div id="replay"></div>
+                    <button class="btn" onclick="changePlayers()">Change Players</button>
+                </div>
+            </div>
+        </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script>
+            bothPlayers = JSON.parse(localStorage.getItem('gamePlayers'))
+            console.log(bothPlayers)
+            firstPlayerName.innerText = bothPlayers[0].FirstPlayer
+            secondPlayerName.innerText = bothPlayers[0].SecondPlayer
+            firstPlayer.innerText = 0
+            secondPlayer.innerText = 0
+            let tic = 'X'
+            const test = (e) => {
+                bothPlayers.map((eachItem, index) => {
+                    return bothPlayers.playersName
+                })
+                if (e.target.innerText == '') {
+                    if (tic == 'X') {
+                        e.target.innerText = 'X'
+                        tic = 'O'
+                    } else if (tic == 'O') {
+                        e.target.innerText = 'O'
+                        tic = 'X'
+                    }
+                } if (one.innerText != '' && two.innerText != '' && three.innerText != '') {
+                    if (one.innerText == two.innerText && one.innerText == three.innerText){
+                        tic = e.target.innerText
+                        if (tic == 'X') {
+                            setTimeout (() => {
+                                result.innerHTML = `<h1>${bothPlayers[0].FirstPlayer} is the winner!</h1>`
+                            },300)
+                            setTimeout (()=> {
+                                one.innerText = ''
+                                two.innerText = ''
+                                three.innerText = ''
+                                four.innerText = ''
+                                five.innerText = ''
+                                six.innerText = ''
+                                seven.innerText = ''
+                                eight.innerText = ''
+                                nine.innerText = ''
+                            },500)
+                            setTimeout (() => {
+                                result.innerHTML = ''
+                                firstPlayer.innerText++
+                            },1000)
+                        } else {
+                            setTimeout (() => {
+                                result.innerHTML = `<h2>${bothPlayers[0].SecondPlayer} is the winner</h2>`
+                            },300)
+                            setTimeout (()=> {
+                                one.innerText = ''
+                                two.innerText = ''
+                                three.innerText = ''
+                                four.innerText = ''
+                                five.innerText = ''
+                                six.innerText = ''
+                                seven.innerText = ''
+                                eight.innerText = ''
+                                nine.innerText = ''
+                            },500)
+                            setTimeout (() => {
+                                result.innerHTML = ''
+                                secondPlayer.innerText++
+                            },1000)
+                        }
+                    } 
+                } if (four.innerText != '' && five.innerText != '' && six.innerText != '') {
+                    if (four.innerText == five.innerText && four.innerText == six.innerText) {
+                        tic = e.target.innerText
+                        if (tic == 'X') {
+                            setTimeout (() => {
+                                result.innerHTML = `<h1>${bothPlayers[0].FirstPlayer} is the winner!</h1>`
+                            },300)
+                            setTimeout (()=> {
+                                one.innerText = ''
+                                two.innerText = ''
+                                three.innerText = ''
+                                four.innerText = ''
+                                five.innerText = ''
+                                six.innerText = ''
+                                seven.innerText = ''
+                                eight.innerText = ''
+                                nine.innerText = ''
+                            },500)
+                            setTimeout (() => {
+                                result.innerHTML = ''
+                                secondPlayer.innerText++
+                            },1000)
+                        } else {
+                            setTimeout (() => {
+                                result.innerHTML = `<h2>${bothPlayers[0].SecondPlayer} is the winner</h2>`
+                            },300)
+                            setTimeout (()=> {
+                                one.innerText = ''
+                                two.innerText = ''
+                                three.innerText = ''
+                                four.innerText = ''
+                                five.innerText = ''
+                                six.innerText = ''
+                                seven.innerText = ''
+                                eight.innerText = ''
+                                nine.innerText = ''
+                            },500)
+                            setTimeout (() => {
+                                result.innerHTML = ''
+                                secondPlayer.innerText++
+                            },1000)
+                        }
+                    }
+                } if (seven.innerText != '' && eight.innerText != '' && nine.innerText != '') {
+                    if (seven.innerText == eight.innerText && seven.innerText == nine.innerText) {
+                        tic = e.target.innerText
+                        if (tic == 'X') {
+                            setTimeout (() => {
+                                result.innerHTML = `<h1>${bothPlayers[0].FirstPlayer} is the winner!</h1>`
+                            },300)
+                            setTimeout (()=> {
+                                one.innerText = ''
+                                two.innerText = ''
+                                three.innerText = ''
+                                four.innerText = ''
+                                five.innerText = ''
+                                six.innerText = ''
+                                seven.innerText = ''
+                                eight.innerText = ''
+                                nine.innerText = ''
+                            },500)
+                            setTimeout (() => {
+                                result.innerHTML = ''
+                                firstPlayer.innerText++
+                            },1000)
+                        } else {
+                            setTimeout (() => {
+                                result.innerHTML = `<h2>${bothPlayers[0].SecondPlayer} is the winner</h2>`
+                            },300)
+                            setTimeout (()=> {
+                                one.innerText = ''
+                                two.innerText = ''
+                                three.innerText = ''
+                                four.innerText = ''
+                                five.innerText = ''
+                                six.innerText = ''
+                                seven.innerText = ''
+                                eight.innerText = ''
+                                nine.innerText = ''
+                            },500)
+                            setTimeout (() => {
+                                result.innerHTML = ''
+                                secondPlayer.innerText++
+                            },1000)
+                        }
+                    }
+                } if (one.innerText != '' && five.innerText != '' & nine.innerText != '') {
+                    if (one.innerText == five.innerText && one.innerText == nine.innerText) {
+                        tic = e.target.innerText
+                        if (tic == 'X') {
+                            setTimeout (() => {
+                                result.innerHTML = `<h1>${bothPlayers[0].FirstPlayer} is the winner!</h1>`
+                            },300)
+                            setTimeout (()=> {
+                                one.innerText = ''
+                                two.innerText = ''
+                                three.innerText = ''
+                                four.innerText = ''
+                                five.innerText = ''
+                                six.innerText = ''
+                                seven.innerText = ''
+                                eight.innerText = ''
+                                nine.innerText = ''
+                            },500)
+                            setTimeout (() => {
+                                result.innerHTML = ''
+                                firstPlayer.innerText++
+                            },1000)
+                        } else {
+                            setTimeout (() => {
+                                result.innerHTML = `<h2>${bothPlayers[0].SecondPlayer} is the winner</h2>`
+                            },300)
+                            setTimeout (()=> {
+                                one.innerText = ''
+                                two.innerText = ''
+                                three.innerText = ''
+                                four.innerText = ''
+                                five.innerText = ''
+                                six.innerText = ''
+                                seven.innerText = ''
+                                eight.innerText = ''
+                                nine.innerText = ''
+                            },500)
+                            setTimeout (() => {
+                                result.innerHTML = ''
+                                secondPlayer.innerText++
+                            },1000)
+                        }
+                    }
+                } if (three.innerText != '' && five.innerText != '' & seven.innerText != '') {
+                    if (three.innerText == five.innerText && three.innerText == seven.innerText) {
+                        tic = e.target.innerText
+                        if (tic == 'X') {
+                            setTimeout (() => {
+                                result.innerHTML = `<h1>${bothPlayers[0].FirstPlayer} is the winner!</h1>`
+                            },300)
+                            setTimeout (()=> {
+                                one.innerText = ''
+                                two.innerText = ''
+                                three.innerText = ''
+                                four.innerText = ''
+                                five.innerText = ''
+                                six.innerText = ''
+                                seven.innerText = ''
+                                eight.innerText = ''
+                                nine.innerText = ''
+                            },500)
+                            setTimeout (() => {
+                                result.innerHTML = ''
+                                firstPlayer.innerText++
+                            },1000)
+                        } else {
+                            setTimeout (() => {
+                                result.innerHTML = `<h2>${bothPlayers[0].SecondPlayer} is the winner</h2>`
+                            },300)
+                            setTimeout (()=> {
+                                one.innerText = ''
+                                two.innerText = ''
+                                three.innerText = ''
+                                four.innerText = ''
+                                five.innerText = ''
+                                six.innerText = ''
+                                seven.innerText = ''
+                                eight.innerText = ''
+                                nine.innerText = ''
+                            },500)
+                            setTimeout (() => {
+                                result.innerHTML = ''
+                                secondPlayer.innerText++
+                            },1000)
+                        }
+                    }
+                } if (one.innerText != '' && four.innerText != '' && seven.innerText != '') {
+                    if (one.innerText == four.innerText && one.innerText == seven.innerText) {
+                        tic = e.target.innerText
+                        if (tic == 'X') {
+                            setTimeout (() => {
+                                result.innerHTML = `<h1>${bothPlayers[0].FirstPlayer} is the winner!</h1>`
+                            },300)
+                            setTimeout (()=> {
+                                one.innerText = ''
+                                two.innerText = ''
+                                three.innerText = ''
+                                four.innerText = ''
+                                five.innerText = ''
+                                six.innerText = ''
+                                seven.innerText = ''
+                                eight.innerText = ''
+                                nine.innerText = ''
+                            },500)
+                            setTimeout (() => {
+                                result.innerHTML = ''
+                                firstPlayer.innerText++
+                            },1000)
+                        } else {
+                            setTimeout (() => {
+                                result.innerHTML = `<h2>${bothPlayers[0].SecondPlayer} is the winner</h2>`
+                            },300)
+                            setTimeout (()=> {
+                                one.innerText = ''
+                                two.innerText = ''
+                                three.innerText = ''
+                                four.innerText = ''
+                                five.innerText = ''
+                                six.innerText = ''
+                                seven.innerText = ''
+                                eight.innerText = ''
+                                nine.innerText = ''
+                            },500)
+                            setTimeout (() => {
+                                result.innerHTML = ''
+                                secondPlayer.innerText++
+                            },1000)
+                        }
+                    }
+                } if (two.innerText != '' && five.innerText != '' && eight.innerText != '') {
+                    if (two.innerText == five.innerText && two.innerText == eight.innerText) {
+                        tic = e.target.innerText
+                        if (tic == 'X') {
+                            setTimeout (() => {
+                                result.innerHTML = `<h1>${bothPlayers[0].FirstPlayer} is the winner!</h1>`
+                            },300)
+                            setTimeout (()=> {
+                                one.innerText = ''
+                                two.innerText = ''
+                                three.innerText = ''
+                                four.innerText = ''
+                                five.innerText = ''
+                                six.innerText = ''
+                                seven.innerText = ''
+                                eight.innerText = ''
+                                nine.innerText = ''
+                            },500)
+                            setTimeout (() => {
+                                result.innerHTML = ''
+                                firstPlayer.innerText++
+                            },1000)
+                        } else {
+                            setTimeout (() => {
+                                result.innerHTML = `<h2>${bothPlayers[0].SecondPlayer} is the winner</h2>`
+                            },300)
+                            setTimeout (()=> {
+                                one.innerText = ''
+                                two.innerText = ''
+                                three.innerText = ''
+                                four.innerText = ''
+                                five.innerText = ''
+                                six.innerText = ''
+                                seven.innerText = ''
+                                eight.innerText = ''
+                                nine.innerText = ''
+                            },500)
+                            setTimeout (() => {
+                                result.innerHTML = ''
+                                secondPlayer.innerText++
+                            },1000)
+                        }
+                    }
+                } if (three.innerText != '' && six.innerText != ''&& nine.innerText != '') {
+                    if (three.innerText == six.innerText && three.innerText == nine.innerText) {
+                        tic = e.target.innerText
+                        if (tic == 'X') {
+                            setTimeout (() => {
+                                result.innerHTML = `<h1>${bothPlayers[0].FirstPlayer} is the winner!</h1>`
+                            },300)
+                            setTimeout (()=> {
+                                one.innerText = ''
+                                two.innerText = ''
+                                three.innerText = ''
+                                four.innerText = ''
+                                five.innerText = ''
+                                six.innerText = ''
+                                seven.innerText = ''
+                                eight.innerText = ''
+                                nine.innerText = ''
+                            },500)
+                            setTimeout (() => {
+                                result.innerHTML = ''
+                                firstPlayer.innerText++
+                            },1000)
+                        } else {
+                            setTimeout (() => {
+                                result.innerHTML = `<h2>${bothPlayers[0].SecondPlayer} is the winner</h2>`
+                            },300)
+                            setTimeout (()=> {
+                                one.innerText = ''
+                                two.innerText = ''
+                                three.innerText = ''
+                                four.innerText = ''
+                                five.innerText = ''
+                                six.innerText = ''
+                                seven.innerText = ''
+                                eight.innerText = ''
+                                nine.innerText = ''
+                            },500)
+                            setTimeout (() => {
+                                result.innerHTML = ''
+                                secondPlayer.innerText++
+                            },1000)
+                        }
+                    }
+                } if (one.innerText != '' && two.innerText != '' && three.innerText != '' && four.innerText != '' && five.innerText != '' && six.innerText != '' && seven.innerText != '' && eight.innerText != '' && nine.innerText != '') {
+                    setTimeout (()=> {
+                        result.innerHTML = `<h2>Game Over!</h2>`
+                    },400)
+                    setTimeout (()=> {
+                                one.innerText = ''
+                                two.innerText = ''
+                                three.innerText = ''
+                                four.innerText = ''
+                                five.innerText = ''
+                                six.innerText = ''
+                                seven.innerText = ''
+                                eight.innerText = ''
+                                nine.innerText = ''
+                            },500)
+                            setTimeout (() => {
+                                result.innerHTML = ''
+                            },1000)
+                    setTimeout(()=> {
+                        if (firstPlayer.innerText > secondPlayer.innerText) {
+                            result.innerHTML = `<h2>${bothPlayers[0].FirstPlayer} wins with ${firstPlayer.innerText} - ${secondPlayer.innerText} over ${bothPlayers[0].SecondPlayer}</h2>`
+                        } else if (secondPlayer.innerText > firstPlayer.innerText) {
+                            result.innerHTML = `<h2>${bothPlayers[0].SecondPlayer} wins with ${secondPlayer.innerText} - ${firstPlayer.innerText} over ${bothPlayers[0].FirstPlayer}</h2>`
+                        } else {
+                            result.innerHTML = `<h1>There's a ${firstPlayer.innerText} - ${secondPlayer.innerText} draw!</h1>`
+                        }
+                    },2000)
+                    setTimeout (()=> {
+                        firstPlayer.innerText = 0
+                        secondPlayer.innerText = 0
+                        replay.innerHTML = '<button onclick="replayGame()">Replay</button>'
+                        gameTable.innerHTML = ''
+                    },2000)
+                }
+
+            }
+            const replayGame = ()=> {
+                setTimeout(()=>{
+                    result.innerHTML = ''
+                    replay.innerHTML = ''
+                    gameTable.innerHTML = `
+                    <tr>
+                            <td onclick="test(event)" id="one"></td>
+                            <td onclick="test(event)" id="two"></td>
+                            <td onclick="test(event)" id="three"></td>
+                        </tr>
+                        <tr>
+                            <td onclick="test(event)" id="four"></td>
+                            <td onclick="test(event)" id="five"></td>
+                            <td onclick="test(event)" id="six"></td>
+                        </tr>
+                        <tr>
+                            <td onclick="test(event)" id="seven"></td>
+                            <td onclick="test(event)" id="eight"></td>
+                            <td onclick="test(event)" id="nine"></td>
+                        </tr>
+                    `
+                },500)
+            }
+            const changePlayers = ()=> {
+                swal({
+                    title: "Are you sure you want to change players?",
+                    text: "Once you continue, you will be redirected to the registration page!",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                    })
+                    .then((willDelete) => {
+                    if (willDelete) {
+                        swal("You ended the game successfully!", {
+                            icon: "success",
+                        });
+                        setTimeout(() => {
+                            location.href="index.html"
+                        },1000);
+                    } else {
+                        swal("Welcome Back!");
+                    }
+                });
+
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,334 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.animate1 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #F92580;
+    border-radius: 50%;
+    animation-name: animate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+@keyframes animate {
+    50% {
+        transform: translate(1250px);
+    }
+    100% {
+        transform: translateY(400px);
+    }
+}
+.animate2 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    right: 0;
+    border: 2px solid #F92580;
+    border-radius: 50%;
+    animation-name: animate2;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+@keyframes animate2 {
+    50% {
+        transform: translate(-1150px);
+    }
+    100% {
+        transform: translateY(400px);
+    }
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+    background-image: url(./Background.jpg);
+    background-size: cover;
+    background-repeat: repeat-y;
+}
+h1{
+    font-size: 40px;
+    color: #F92580;
+    margin-bottom: 20px;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.col-6{
+    flex: 0 0 50%;
+    max-width: 100%;
+}
+.container .row .score {
+    backdrop-filter: blur(4px);
+}
+table.game{
+    backdrop-filter: blur(5px);
+    width: 400px;
+    height: 400px;
+    margin: auto;
+}
+table.game tr td {
+    border: 3px solid #F92580;
+    width: 70px;
+    height: 70px;
+    font-size: 50px;
+    color: #f92580;
+}
+h2{
+    font-size: 30px;
+    padding: 10px;
+    color: #F92580;
+}
+table.result {
+    border: 3px solid #F92580;
+    width: 500px;
+    height: 200px;
+    margin: auto;
+}
+table.result tr th {
+    border: 1px solid #F92580;
+    width: 80px;
+    height: 50px;
+    font-size: 30px;
+    color: #F92580;
+}
+table.result tr td {
+    border: 1px solid #F92580;
+    width: 80px;
+    height: 50px;
+    font-size: 50px;
+    color: #F92580;
+}
+#result {
+    font-size: 40px;
+    color: #F92580;
+}
+#replay button {
+    width: 25%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background: #F92580;
+    color: #002866;
+    font-size: 30px;
+    margin-top: 40px;
+    transition: all 0.3s ease;
+}
+#replay button:hover {
+    background: #002866;
+    width: 40%;
+    color: #F92580;
+    border: 2px solid #F92580;
+    background: none;
+}
+#change button {
+    width: 40%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background: #F92580;
+    color: #002866;
+    font-size: 30px;
+    margin-top: 40px;
+    transition: all 0.3s ease;
+}
+#change button:hover {
+    background: #002866;
+    width: 35%;
+    color: #F92580;
+    border: 2px solid #F92580;
+    background: none;
+}
+.btn {
+    width: 40%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background: #F92580;
+    color: #002866;
+    font-size: 30px;
+    margin-top: 40px;
+    transition: all 0.3s ease;
+}
+.btn:hover {
+    background: #002866;
+    width: 35%;
+    color: #F92580;
+    border: 2px solid #F92580;
+    background: none;
+}
+@media (max-width: 768px) {
+    .animate1 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border: 2px solid #F92580;
+        border-radius: 50%;
+        animation-name: animate;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+    }
+    @keyframes animate {
+        50% {
+            transform: translate(250px);
+        }
+        100% {
+            transform: translateY(400px);
+        }
+    }
+    .animate2 {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        right: 0;
+        border: 2px solid #F92580;
+        border-radius: 50%;
+        animation-name: animate2;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+    }
+    @keyframes animate2 {
+        50% {
+            transform: translate(-200px);
+        }
+        100% {
+            transform: translateY(400px);
+        }
+    }
+    .container {
+        width: 100%;
+        height: 200%;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        padding: 20px;
+        background-image: url(./Background.jpg);
+        background-size: cover;
+        background-repeat: repeat-y;
+    }
+    h1{
+        font-size: 25px;
+        color: #F92580;
+        margin-bottom: 20px;
+    }
+    .row {
+        display: block;
+        padding: 10px;
+    }
+    .container .row .score {
+        margin-top: 20px;
+        backdrop-filter: blur(4px);
+        height: 500px
+    }
+    table.game{
+        backdrop-filter: blur(5px);
+        width: 300px;
+        height: 300px;
+        margin: auto;
+    }
+    table.game tr td {
+        border: 3px solid #F92580;
+        width: 70px;
+        height: 70px;
+        font-size: 50px;
+        color: #f92580;
+    }
+    h2{
+        font-size: 20px;
+        padding: 10px;
+        color: #F92580;
+    }
+    table.result {
+        border: 3px solid #F92580;
+        width: 300px;
+        height: 200px;
+        margin: auto;
+    }
+    table.result tr th {
+        border: 1px solid #F92580;
+        width: 50px;
+        height: 20px;
+        font-size: 20px;
+        color: #F92580;
+    }
+    table.result tr td {
+        border: 1px solid #F92580;
+        width: 50px;
+        height: 20px;
+        font-size: 30px;
+        color: #F92580;
+    }
+    #result {
+        font-size: 20px;
+        color: #F92580;
+    }
+    #replay button {
+        width: 40%;
+        height: 50px;
+        border: none;
+        border-radius: 10px;
+        background: #F92580;
+        color: #002866;
+        font-size: 30px;
+        margin-top: 40px;
+        transition: all 0.3s ease;
+    }
+    #replay button:hover {
+        background: #002866;
+        width: 40%;
+        color: #F92580;
+        border: 2px solid #F92580;
+        background: none;
+    }
+    #change button {
+        width: 80%;
+        height: 50px;
+        border: none;
+        border-radius: 10px;
+        background: #F92580;
+        color: #002866;
+        font-size: 30px;
+        margin-top: 40px;
+        transition: all 0.3s ease;
+    }
+    #change button:hover {
+        background: #002866;
+        width: 80%;
+        color: #F92580;
+        border: 2px solid #F92580;
+        background: none;
+    }
+    .btn {
+        width: 80%;
+        height: 50px;
+        border: none;
+        border-radius: 10px;
+        background: #F92580;
+        color: #002866;
+        font-size: 30px;
+        margin-top: 40px;
+        transition: all 0.3s ease;
+    }
+    .btn:hover {
+        background: #002866;
+        width: 80%;
+        color: #F92580;
+        border: 2px solid #F92580;
+        background: none;
+    }
+}
